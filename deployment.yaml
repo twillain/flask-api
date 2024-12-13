@@ -123,6 +123,7 @@ spec:
       containers:
         - name: flaskapi
           image: twillain/simple-crud-api:latest
+          imagePullPolicy: Always
           resources:
             limits:
               cpu: 50m
