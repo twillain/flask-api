@@ -18,7 +18,7 @@ jobs:
                 password: ${{secrets.DOCKER_PASSWORD}}
 
             - name: Build and Push Image
-              run:
+              run: |
                 docker build -t flask-api:${{github.sha}} .
                 docker tag flash-api:${{github.sha}} twilain/flask-api:${{github.sha}}
                 docker push twillain/flask-api:${{github.sha}}

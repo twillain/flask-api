@@ -122,7 +122,7 @@ spec:
     spec:
       containers:
         - name: flaskapi
-          image: twillain/simple-crud-api
+          image: twillain/simple-crud-api:latest
           resources:
             limits:
               cpu: 50m
