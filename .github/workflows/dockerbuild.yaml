@@ -20,5 +20,5 @@ jobs:
             - name: Build and Push Image
               run: |
                 docker build -t flask-api:${{github.sha}} .
-                docker tag flask-api:${{github.sha}} twilain/flask-api:${{github.sha}}
+                docker tag flask-api:${{github.sha}} twillain/flask-api:${{github.sha}}
                 docker push twillain/flask-api:${{github.sha}}
