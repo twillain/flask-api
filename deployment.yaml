@@ -121,7 +121,7 @@ spec:
         k8s-app: flaskapi
     spec:
       containers:
-        - name: flaskapi
+        - name: flask-api
           image: twillain/flask-api:latest
           imagePullPolicy: Always
           resources:
