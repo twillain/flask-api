@@ -22,3 +22,17 @@ jobs:
                 docker build -t flask-api:latest .
                 docker tag flask-api:latest twillain/flask-api:latest
                 docker push twillain/flask-api:latest
+
+            - name: Update Deployment Manifest
+              run: |
+              sed -i "s|image: twillain/flask-api:.*|image: twillain/flask-api:${{ github.sha }}|" flask-api.yaml
+  
+            - name: Commit and Push Changes
+              run: |
+                git config user.name "GitHub Actions"
+                git config user.email "actions@github.com"
+                git add deployment.yaml
+                git commit -m "Update image tag to ${{ github.sha }}"
+                git push
+              env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
