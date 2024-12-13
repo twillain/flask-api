@@ -1,7 +1,7 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: flaskapi
+  name: flask-api
   namespace: default
   uid: 7791d7ab-9b78-4c15-b41d-29412ac9aaec
   resourceVersion: '8298'
