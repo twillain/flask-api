@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: flask-api
-          image: twillain/flask-api:latest
+          image: twillain/flask-api:9bdcb4c9d8ec8fc2ec22d97247c1d9f65f1c8c65
           imagePullPolicy: Always
           ports:
           - containerPort: 5000
